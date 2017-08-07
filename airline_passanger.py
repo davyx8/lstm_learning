@@ -50,21 +50,3 @@ print 'train score sqrt  is {}'.format(math.sqrt(train_score))
 
 train_predict = model.predict(train_x)
 test_predict = model.predict(test_x)
-
-'''
-# generate predictions for training
-trainPredict = model.predict(train_x)
-test_predict = model.predict(test_x)
-# shift train predictions for plotting
-trainPredictPlot = numpy.empty_like(dataset)
-trainPredictPlot[:, :] = numpy.nan
-trainPredictPlot[look_back:len(trainPredict)+look_back, :] = trainPredict
-# shift test predictions for plotting
-testPredictPlot = numpy.empty_like(dataset)
-testPredictPlot[:, :] = numpy.nan
-testPredictPlot[len(trainPredict)+(look_back*2)+1:len(dataset)-1, :] = test_predict
-# plot baseline and predictions
-plt.plot(dataset)
-plt.plot(trainPredictPlot)
-plt.plot(testPredictPlot)
-plt.show()'''
